@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS 'trips'(
     id TEXT PRIMARY KEY ,
     destination TEXT NOT NULL ,
     start_data DATETIME , 
-    end_datae DATETIME,
+    end_data DATETIME,
     owner_name TEXT NOT NULL,
     owner_email TEXT NOT NULL,
     status  INTEGER
