@@ -24,5 +24,23 @@ O projeto também inclui **testes automatizados com pytest**, garantindo a confi
 
 ---
 
-## 📁 Estrutura do Projeto
+
+---
+
+## 🛠️ Tecnologias
+
+- **Python 3.12**  
+- **SQLite** — banco de dados local  
+- **pytest** — testes automatizados  
+- Organização modular para fácil manutenção e escalabilidade
+
+---
+
+## ⚡ Como Rodar
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/paivagpg77/projetoviagem.git
+cd projetoviagem
 
