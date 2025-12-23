@@ -1,19 +1,18 @@
 import sqlite3
-from sqlite3 import Connection
 
-
-class DbconnectionHandler:
-    def __init__(self) -> None:
-        self.__connection_string = "storage.db"
+class DBConnectionHandler:
+    def __init__(self, db_path: str = "storage.db"):
+        self.db_path = db_path
         self.__conn = None
 
-    def connect (self) -> None:
-        conn = sqlite3.connect(self.__connection_string , check_same_thread=False)
-        self.__conn = conn
-    
-    def get_connection(self):
+    def connect(self):
+        if self.__conn is None:
+            self.__conn = sqlite3.connect(self.db_path)
         return self.__conn
-    
-db_connection_handler = DbconnectionHandler()
 
-        
+    def get_connection(self):
+        if self.__conn is None:
+            raise Exception("Database not connected. Call connect() first.")
+        return self.__conn
+
+db_connection_handler = DBConnectionHandler()
